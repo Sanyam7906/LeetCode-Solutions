@@ -3,10 +3,7 @@ public:
     double myPow(double x, int n) {
         double ans = 1.0;
         long long num = n;
-        if(num<0)
-        {
-            num = -1*num;
-        }
+        num = abs(num);
         while(num>0)
         {
             if(num%2==1)
@@ -25,5 +22,6 @@ public:
             ans = (double)(1.0)/(double)(ans);
         }
         return ans;
+        // use pow function
     }
 };
