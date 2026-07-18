@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool isThree(int n) {
+
+        // is perfect and sq and num is prime
+        int num = sqrt(n);
+        if(n==1)
+        {
+            return false;
+        }
+        int flag = 1;
+        for(int i=2;i*i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                return false;
+            }
+        }
+        return num*num == n;
+    }
+};
